@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ビューポート情報</title>
+</head>
+<body>
+    <script>
+        // JavaScriptコード
+        const referrer = document.referrer;
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+
+        const str = `UA: ${navigator.userAgent}, <br><br> referrer: ${referrer}, <br><br><br><br> HEIGHT: ${viewportHeight} <br><br> WIDTH: ${viewportWidth}`;
+
+        document.body.innerHTML = str;
+    </script>
+</body>
+</html>
