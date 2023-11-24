@@ -7,13 +7,18 @@
 <body>
     <script>
         // JavaScriptコード
-        const referrer = document.referrer;
-        const viewportHeight = window.innerHeight;
-        const viewportWidth = window.innerWidth;
+        function updateInfo() {
+            const referrer = document.referrer;
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
 
-        const str = `UA: ${navigator.userAgent}, <br><br> referrer: ${referrer}, <br><br><br><br> HEIGHT: ${viewportHeight} <br><br> WIDTH: ${viewportWidth}`;
+            const str = `UA: ${navigator.userAgent}, <br><br> referrer: ${referrer}, <br><br><br><br> HEIGHT: ${viewportHeight} <br><br> WIDTH: ${viewportWidth}`;
 
-        document.body.innerHTML = str;
+            document.body.innerHTML = str;
+        }
+
+        // 5秒ごとにupdateInfo関数を実行
+        setInterval(updateInfo, 5000);
     </script>
 </body>
 </html>
